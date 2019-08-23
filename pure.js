@@ -10,5 +10,6 @@
 const headerTags = document.querySelectorAll("h1")
 
 headerTags.forEach(h1 => {
-	h1.style.backgroundColor = "var(--secondary-blue)"
+	const hue = 360 * Math.random()
+	h1.style.backgroundColor = "hsl("+ hue +", 100%, 50%)"
 })
