@@ -9,7 +9,17 @@
 
 const headerTags = document.querySelectorAll("h1")
 
-headerTags.forEach(h1 => {
+headerTags.forEach((h1, index) => {
+	h1.innerHTML = "this is tag number " + index
+})
+
+
+const rectTags = document.querySelectorAll("rect")
+
+rectTags.forEach((tag, index) => {
 	const hue = 360 * Math.random()
-	h1.style.backgroundColor = "hsl("+ hue +", 100%, 50%)"
+	tag.style.fill = "hsl(" + hue +", 100%, 50%)"
+
+	const width = 100 + 300 * index
+	tag.setAttribute("width", width + "px")
 })
