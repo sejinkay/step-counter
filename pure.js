@@ -15,11 +15,12 @@ headerTags.forEach((h1, index) => {
 
 
 const rectTags = document.querySelectorAll("rect")
+const data = [550, 420, 731]
 
 rectTags.forEach((tag, index) => {
 	const hue = 360 * Math.random()
 	tag.style.fill = "hsl(" + hue +", 100%, 50%)"
 
-	const width = 100 + 300 * index
+	const width = data[index]
 	tag.setAttribute("width", width + "px")
 })
